@@ -1,0 +1,19 @@
+{
+  "n_tokens": 4,
+  "n_blocks": 20,
+  "n_connected_batches": 20,
+  "fraction_connected": 1.0,
+  "mean_executed_orders_per_block": 5.2,
+  "mean_trading_fee_value": 0.985824520029109,
+  "mean_surplus_value": 4.180115078028399,
+  "surplus_values_all_nonnegative": true,
+  "mean_solver_trading_fee_payout": 0.09858245200291092,
+  "mean_solver_surplus_payout": 3.344092062422719,
+  "mean_dao_trading_fee_revenue": 0.8872420680261983,
+  "mean_dao_surplus_revenue": 0.8360230156056796,
+  "solver_fee_share_within_cap": true,
+  "solver_surplus_share_within_cap": true,
+  "allowlisted_solvers": [
+    "solver_honest"
+  ]
+}

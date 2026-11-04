@@ -163,6 +163,8 @@ def simulate_blocks(
     orders_per_block: int,
     gas_price: float,
     rng: np.random.Generator,
+    gas_units_per_order: float = 150000.0,
+    max_relative_gas_fee: float = 0.02,
 ) -> list[Batch]:
     """Simulate ``n_blocks`` batches with randomly disclosed trade orders
     (Subsections 8.1.1, 8.4), each solved by algorithm_A."""
@@ -180,8 +182,8 @@ def simulate_blocks(
                     token_i=int(i),
                     token_j=int(j),
                     supply_function=continuous_limit_sell_order(b, r1, r2),
-                    gas_units=150000.0,
-                    max_relative_gas_fee=0.02,
+                    gas_units=gas_units_per_order,
+                    max_relative_gas_fee=max_relative_gas_fee,
                     value_of_sold_tokens=value,
                 )
             )

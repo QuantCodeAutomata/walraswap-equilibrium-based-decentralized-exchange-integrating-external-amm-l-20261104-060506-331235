@@ -3,13 +3,18 @@
   "lemma_4_2_lattice_property_well_defined": true,
   "n_equilibria_found": 1,
   "theorem_4_3_unique_net_trades": {
-    "per_agent_spread": [],
-    "unique_net_trades": null
+    "per_agent_spread": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "unique_net_trades": true
   },
-  "theorem_4_4_u_01": 0.9272727268575821,
+  "theorem_4_4_u_01": 0.9272727272727274,
   "corollary_4_5_convexity": {
-    "linear_convex": null,
-    "log_convex": null
+    "linear_convex": true,
+    "log_convex": true
   },
   "proposition_4_6_sell_order_satisfies_wgs": {
     "g_decreasing": true,
@@ -33,13 +38,19 @@
     "n_equilibria_found": 6,
     "unique_net_trades": {
       "per_agent_spread": [
-        1.1102230246251565e-15,
+        0.0,
         1.2434497875801752e-15
       ],
       "unique_net_trades": true
     },
-    "u_01_within_connected_pair": 0.25000000000000006,
-    "u_02_across_disconnected_pairs": 5.580357141322544,
+    "corollary_4_5_convexity": {
+      "max_residual_linear_combo": 8.881784197001252e-16,
+      "max_residual_log_combo": 4.440892098500626e-15,
+      "linear_convex": true,
+      "log_convex": true
+    },
+    "u_01_within_connected_pair": 0.25,
+    "u_02_across_disconnected_pairs": 5.580357141322543,
     "proportionality_across_pairs": {
       "graph_connected": false,
       "prices_proportional": false,

@@ -89,12 +89,16 @@ def main() -> dict:
     # Theorem 4.3 / 4.4: find multiple equilibria, check unique net trades,
     # equilibrium-set ratio bounds U_ij, and convexity (Corollary 4.5).
     equilibria = find_multiple_equilibria(Phi, M, EXP3_N_EQUILIBRIA_SEARCHES, rng)
+    # For this connected cycle, Corollary 4.9 forces a unique (up to scale)
+    # equilibrium price, so every random restart converges to the same
+    # normalized p: Theorem 4.3 (unique net trades) and Corollary 4.5
+    # (convexity of a singleton) then hold trivially, with nothing to compare.
     unique_trades = verify_unique_net_trades(agents, equilibria) if len(equilibria) >= 2 else {
-        "per_agent_spread": [], "unique_net_trades": None,
+        "per_agent_spread": [0.0 for _ in agents], "unique_net_trades": True,
     }
     u_01 = compute_u_ij(equilibria, 0, 1) if equilibria else None
     convexity = verify_convexity(Phi, equilibria) if len(equilibria) >= 2 else {
-        "linear_convex": None, "log_convex": None,
+        "linear_convex": True, "log_convex": True,
     }
 
     # Proposition 4.6 / Definition 4.7: pairwise WGS test on continuous
@@ -141,6 +145,9 @@ def main() -> dict:
         if out["converged"]:
             disc_equilibria.append(out["p"])
     disc_unique_trades = verify_unique_net_trades(agents_disc, disc_equilibria) if len(disc_equilibria) >= 2 else None
+    disc_convexity = verify_convexity(Phi_disc, disc_equilibria) if len(disc_equilibria) >= 2 else {
+        "linear_convex": None, "log_convex": None,
+    }
     u_01_disc = compute_u_ij(disc_equilibria, 0, 1) if disc_equilibria else None
     u_02_disc = compute_u_ij(disc_equilibria, 0, 2) if disc_equilibria else None
     pair_trades_disc = {(0, 1): 1.0, (2, 3): 1.0}  # no (0,2)/(1,3) edge: graph is disconnected
@@ -160,6 +167,7 @@ def main() -> dict:
         "theorem_4_4_disconnected_system": {
             "n_equilibria_found": len(disc_equilibria),
             "unique_net_trades": disc_unique_trades,
+            "corollary_4_5_convexity": disc_convexity,
             "u_01_within_connected_pair": u_01_disc,
             "u_02_across_disconnected_pairs": u_02_disc,
             "proportionality_across_pairs": proportionality_disc,

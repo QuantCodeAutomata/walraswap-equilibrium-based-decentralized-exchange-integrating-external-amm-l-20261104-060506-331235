@@ -99,8 +99,16 @@ EXP7_N_TOKENS = 4                   # tokens used in the protocol simulation (no
 EXP7_N_BLOCKS = 20                  # number of simulated block slots (not specified)
 EXP7_ORDERS_PER_BLOCK = 6           # trade orders disclosed per block on average (not specified)
 EXP7_TRADING_FEE_TAU = 0.003        # trading-fee rate tau of Eq. (5), Sec. 8.7 (illustrative value; not numerically specified)
-EXP7_GAS_PRICE = 30.0               # gas price in gwei-equivalent units used in the simulation (not specified)
-EXP7_GAS_UNITS_PER_ORDER = 150000.0 # tabulated gas units per order, Sec. 8.8 (illustrative; not specified)
+EXP7_GAS_PRICE = 2.0e-5             # gas price expressed directly in token-value units
+                                     # per gas unit, Sec. 8.8 (illustrative; the paper gives
+                                     # no numeraire or gwei/token conversion, so gas cost
+                                     # here is denominated directly in the same token-value
+                                     # units as value_of_sold_tokens)
+EXP7_GAS_UNITS_PER_ORDER = 25000.0  # tabulated gas units per order, Sec. 8.8 (illustrative; chosen,
+                                     # together with EXP7_GAS_PRICE, so the tabulated gas cost (0.5
+                                     # token-value units) is comparable to the per-order cap
+                                     # max_relative_gas_fee * value_of_sold_tokens, so that the
+                                     # gas-fee filtering of Subsection 8.8 is actually exercised)
 EXP7_MAX_RELATIVE_GAS_FEE = 0.02    # per-order cap on gas_fee / value_of_sold_tokens, Sec. 8.8 (illustrative; not specified)
 EXP7_ALPHA_1_CAP_GAMMA_1 = 0.10     # gamma_1: cap on the solver's share of trading fees, Sec. 8.10 (DAO keeps most fees -> small; not numerically specified)
 EXP7_ALPHA_2_CAP_GAMMA_2 = 0.80     # gamma_2: cap on the solver's share of AMM surplus, Sec. 8.10 (can reach one; illustrative)
