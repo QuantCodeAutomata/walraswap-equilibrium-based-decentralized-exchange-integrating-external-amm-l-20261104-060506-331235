@@ -35,9 +35,10 @@ exp/     one script per experiment (exp1_supply_functions.py ... exp8_nondiff_am
 tests/   pytest unit tests of src/ components, on synthetic/analytic fixtures
 results/ metrics (JSON), plots (PNG) and RESULTS.md, all written directly here
 data/    data/generate_synthetic.py: synthetic input generators (random price
-         vectors on the simplex, random AMM reserves) shared across
-         experiments; no data_loader.py, since the paper's model takes no
-         market data
+         vectors, simplex points, AMM reserve pairs, supply-function
+         parameters) that experiments 1, 3 and 4 import for their randomized
+         checks; no data_loader.py, since the paper's model takes no market
+         data
 ```
 
 ## Commands
@@ -79,9 +80,11 @@ or `./reproduce.sh` to run the test suite followed by all eight experiments.
   `UPPER_CASE` constants grouped by experiment, each with a one-line comment
   giving the paper section/equation it comes from, or stating that the
   paper does not specify it. No parameter is hardcoded elsewhere.
-* Data preparation code lives only under `data/`; `src/` and `exp/` never
-  construct raw synthetic inputs directly, they call
-  `data/generate_synthetic.py`.
+* Randomized-input generation shared across more than one experiment lives
+  only under `data/generate_synthetic.py`. Experiments that only need a
+  single seeded draw or a deterministic parameter grid (fixed by
+  `src/config.py`) construct it inline instead of adding a one-off
+  generator function used nowhere else.
 * `tests/` holds every pytest file; it tests paper properties (signs,
   monotonicity, Walras's law, homogeneity, absence of look-ahead where
   applicable, equilibrium uniqueness) on small or analytic fixtures, not
