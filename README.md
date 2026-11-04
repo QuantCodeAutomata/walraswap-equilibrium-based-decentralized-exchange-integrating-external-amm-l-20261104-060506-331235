@@ -23,7 +23,7 @@ definitions, propositions, lemmas and theorems.
 
 ```
 src/     flat library modules implementing the paper's mathematical objects
-exp/     one script per selected experiment, calling only src/ functions
+exp/     one script per experiment, calling only src/ functions
 tests/   pytest unit tests of src/ components (synthetic/analytic fixtures)
 results/ metrics (JSON), plots (PNG) and RESULTS.md written by the exp/ scripts
 data/    data/generate_synthetic.py: synthetic input generators (price vectors,

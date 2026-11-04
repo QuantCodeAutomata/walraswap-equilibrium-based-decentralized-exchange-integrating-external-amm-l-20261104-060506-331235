@@ -65,7 +65,7 @@ EXP4_R_GRID_MAX_FACTOR = 5.0              # grid upper bound as a multiple of f'
 # ---------------------------------------------------------------------------
 # exp_5: Fundamental Theorem of Walraswap (Sec. 6, Thm 6.4)
 # ---------------------------------------------------------------------------
-EXP5_N_TOKENS = 3                         # 3-token example requested by the experiment description
+EXP5_N_TOKENS = 3                         # 3-token system, Sec. 6 (paper gives no fixed numeric example)
 # Token indices are 0-based (0, 1, 2) for the 3-token system.
 EXP5_AMM_RESERVES = {(0, 1): (80.0, 120.0), (1, 2): (60.0, 90.0)}  # (a,b) reserves
                                            # of the two constant-product external AMMs (token i -> token j)
@@ -82,7 +82,7 @@ EXP5_TRADE_ORDER_LINEAR_PARAMS = {
 # ---------------------------------------------------------------------------
 # exp_6: Convex Optimization for Equilibrium Computation (Sec. 7, Thm 7.3)
 # ---------------------------------------------------------------------------
-EXP6_N_TOKENS = 3                 # 3-token system requested by the experiment description
+EXP6_N_TOKENS = 3                 # 3-token system, Sec. 7 (paper gives no fixed numeric example)
 # Token indices are 0-based (0, 1, 2) for the 3-token system.
 EXP6_LINEAR_G = {
     (0, 1): (1.0, 4.0),

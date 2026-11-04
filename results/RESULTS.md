@@ -276,10 +276,11 @@ non-differentiable, concave AMM all hold numerically).
 * **Token counts and reserve/parameter values** for the multi-token examples
   (4 tokens in Experiment 2/3, 3 tokens in Experiment 5/6, specific
   constant-product reserves in Experiments 4/5/8) are not given numerically by
-  the paper; the experiment descriptions request "a multi-token example" and
-  "a 3-token example" without specifying the numbers, so illustrative values
-  satisfying the paper's hypotheses (connectivity, WGS, strict positivity of
-  reserves) were chosen and are recorded in `src/config.py`.
+  the paper, which illustrates these constructions only qualitatively (e.g.
+  "a multi-token example" in Section 6, a 3-token system in Section 7) without
+  specifying numbers; illustrative values satisfying the paper's hypotheses
+  (connectivity, WGS, strict positivity of reserves) were chosen and are
+  recorded in `src/config.py`.
 * **Experiment 7 (Section 8) quantitative parameters.** The paper gives no
   numerical values for the trading-fee rate `tau`, gas price/units, the maximum
   relative gas fee, the solver payout caps `gamma_1, gamma_2`, the realized
@@ -298,12 +299,11 @@ non-differentiable, concave AMM all hold numerically).
   here is an illustrative analogue built to exhibit genuine kinks and a
   liquidity gap, matching Appendix A's qualitative description, not a literal
   Uniswap V3 formula.
-* **Authors' code or data.** No link to authors' code or a public repository for
-  this paper was found during evidence retrieval; no author-provided code or
-  dataset was used.
+* **Authors' code or data.** The paper text contains no link to an authors'
+  code repository or dataset; none was used.
 
 ## Not reproduced
 
-None. Every selected experiment (exp_1 through exp_8) was implemented and run,
-and every mathematical property its description and the corresponding paper
-sections state was checked numerically with a reported verdict above.
+None. Every mathematical property stated in Sections 2-8 and Appendix A that
+is covered by Experiments 1-8 above was checked numerically with a reported
+verdict.
