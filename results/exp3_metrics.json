@@ -1,0 +1,49 @@
+{
+  "definition_4_1_wgs_holds_for_linear_cycle": true,
+  "lemma_4_2_lattice_property_well_defined": true,
+  "n_equilibria_found": 1,
+  "theorem_4_3_unique_net_trades": {
+    "per_agent_spread": [],
+    "unique_net_trades": null
+  },
+  "theorem_4_4_u_01": 0.9272727268575821,
+  "corollary_4_5_convexity": {
+    "linear_convex": null,
+    "log_convex": null
+  },
+  "proposition_4_6_sell_order_satisfies_wgs": {
+    "g_decreasing": true,
+    "g_over_r_decreasing": true,
+    "g_tilde_decreasing": true,
+    "satisfies_wgs": true
+  },
+  "proposition_4_6_buy_order_satisfies_wgs": {
+    "g_decreasing": true,
+    "g_over_r_decreasing": false,
+    "g_tilde_decreasing": false,
+    "satisfies_wgs": false
+  },
+  "buy_order_wgs_expected_false": true,
+  "corollary_4_9_connectedness_implies_proportional": {
+    "graph_connected": true,
+    "prices_proportional": true,
+    "corollary_4_9_holds": true
+  },
+  "theorem_4_4_disconnected_system": {
+    "n_equilibria_found": 6,
+    "unique_net_trades": {
+      "per_agent_spread": [
+        1.1102230246251565e-15,
+        1.2434497875801752e-15
+      ],
+      "unique_net_trades": true
+    },
+    "u_01_within_connected_pair": 0.25000000000000006,
+    "u_02_across_disconnected_pairs": 5.580357141322544,
+    "proportionality_across_pairs": {
+      "graph_connected": false,
+      "prices_proportional": false,
+      "corollary_4_9_holds": true
+    }
+  }
+}

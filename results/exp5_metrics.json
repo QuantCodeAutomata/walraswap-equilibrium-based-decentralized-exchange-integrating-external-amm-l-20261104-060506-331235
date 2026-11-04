@@ -1,0 +1,49 @@
+{
+  "n_tokens": 3,
+  "connectivity_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ]
+  ],
+  "definition_6_2_connected": true,
+  "equilibrium_price": [
+    0.41488155119872067,
+    0.32053392119172225,
+    0.2645845276095571
+  ],
+  "fixed_point_residual": "[ 1.37667655e-13 -6.39488462e-14 -1.40332190e-13]",
+  "balance_matches_surplus": true,
+  "surplus_nonnegative": true,
+  "per_amm_surplus": {
+    "amm_0_1": 0.4683782007331782,
+    "amm_1_2": 0.7625197808073692
+  },
+  "strict_matches_sign": {
+    "amm_0_1": true,
+    "amm_1_2": true
+  },
+  "remark_6_5_is_maximizer": true,
+  "remark_6_5_value_at_h_Cp": 0.43873492979628503,
+  "remark_6_5_max_probe_value": 0.43848539179285134
+}

@@ -1,0 +1,43 @@
+{
+  "theorem_3_4_strict_supply_function": {
+    "n_tokens": 4,
+    "strongly_connected_graph": true,
+    "fixed_point_q": [
+      0.26978417267821364,
+      0.2733812949360306,
+      0.2302158272858152,
+      0.2266187050999407
+    ],
+    "equilibrium_price_p": [
+      0.05395683451405999,
+      0.06834532369983498,
+      0.028776978403532653,
+      0.05035971222204917
+    ],
+    "residual_Phi_p": [
+      -3.286273475566759e-10,
+      -9.359140129561183e-10,
+      6.16176443202221e-10,
+      1.270169303069224e-09
+    ],
+    "residual_norm": 1.270169303069224e-09,
+    "equilibrium_found": true,
+    "iterations": 37
+  },
+  "proposition_3_5_connectivity_preserved": {
+    "n_edges_in_union": 8,
+    "expected_at_least": 4,
+    "strongly_connected_after_union": true
+  },
+  "remark_non_strict_counterexample": {
+    "description": "phi(p1,p2) = (-p2/p1, 1)",
+    "psi_at_p_eq_1_eps": [
+      -1e-09,
+      1e-09
+    ],
+    "does_not_connect_2_to_1": true,
+    "brouwer_iteration_residual_norm": 1.0,
+    "brouwer_iteration_converged": false,
+    "note": "a small/zero residual here would not contradict the remark: the point is that phi_2 = 1 identically keeps token 2's price from ever being driven to make token 1 valuable (connects_2_to_1 is False), so no interior equilibrium with both prices meaningfully determined by market clearing exists; the iteration either drifts to a boundary or fails to stabilize at an interior fixed point reflecting true clearing of both tokens."
+  }
+}

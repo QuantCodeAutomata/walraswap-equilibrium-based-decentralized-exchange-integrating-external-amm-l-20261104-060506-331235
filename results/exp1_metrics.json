@@ -1,0 +1,54 @@
+{
+  "definition_2_1": {
+    "linear_g": {
+      "homogeneity": true,
+      "walras_law": true,
+      "bounded_above": true,
+      "boundary_condition_a_liminf_g_nonneg": true,
+      "boundary_condition_b_limsup_g_over_r_nonpos": true
+    },
+    "continuous_sell_order": {
+      "homogeneity": true,
+      "walras_law": true,
+      "bounded_above": true,
+      "boundary_condition_a_liminf_g_nonneg": true,
+      "boundary_condition_b_limsup_g_over_r_nonpos": true
+    },
+    "continuous_buy_order": {
+      "homogeneity": true,
+      "walras_law": true,
+      "bounded_above": true,
+      "boundary_condition_a_liminf_g_nonneg": true,
+      "boundary_condition_b_limsup_g_over_r_nonpos": true
+    }
+  },
+  "proposition_2_2_sum_is_supply_function": {
+    "homogeneity": true,
+    "walras_law": true,
+    "bounded_above": true
+  },
+  "conjugate_tilde_tilde_g_equals_g": {
+    "linear_g": {
+      "max_abs_diff_g_vs_tilde_tilde_g": 4.547473508864641e-13,
+      "tilde_tilde_g_equals_g": true
+    },
+    "continuous_sell_order": {
+      "max_abs_diff_g_vs_tilde_tilde_g": 4.440892098500626e-16,
+      "tilde_tilde_g_equals_g": true
+    },
+    "continuous_buy_order": {
+      "max_abs_diff_g_vs_tilde_tilde_g": 2.220446049250313e-16,
+      "tilde_tilde_g_equals_g": true
+    }
+  },
+  "examples_2_8_function_maximizing_amm": {
+    "max_abs_diff_vs_g_y2_x2": 0.0,
+    "matches_g_y2_x2": true,
+    "budget_constraint_holds": true,
+    "walras_law_holds": true
+  },
+  "lemma_2_11_extension_and_proposition_2_10_restriction": {
+    "zero_outside_support": true,
+    "restriction_matches_original": true
+  }
+}

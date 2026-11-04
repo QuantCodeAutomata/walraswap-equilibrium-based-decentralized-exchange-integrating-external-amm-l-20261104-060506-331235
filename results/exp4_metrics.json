@@ -1,0 +1,107 @@
+{
+  "proposition_5_4": {
+    "(a=100.0, b=200.0)": {
+      "lim_g_at_0": 1.9800000000000002,
+      "lim_g_over_r_at_inf": 0.0,
+      "lim_G_at_0": 198.0,
+      "lim_G_over_r_at_inf": 0.0,
+      "g_le_G_everywhere": true,
+      "strict_inequality_below_fprime0": true,
+      "G_is_wgs": true,
+      "g_is_wgs": false,
+      "G_connects_2_to_1": true,
+      "G_connects_1_to_2": false,
+      "surplus_nonnegative": true
+    },
+    "(a=50.0, b=400.0)": {
+      "lim_g_at_0": 3.9600000000000004,
+      "lim_g_over_r_at_inf": 0.0,
+      "lim_G_at_0": 396.0,
+      "lim_G_over_r_at_inf": 0.0,
+      "g_le_G_everywhere": true,
+      "strict_inequality_below_fprime0": true,
+      "G_is_wgs": true,
+      "g_is_wgs": false,
+      "G_connects_2_to_1": true,
+      "G_connects_1_to_2": false,
+      "surplus_nonnegative": true
+    },
+    "(a=10.0, b=10.0)": {
+      "lim_g_at_0": 0.099,
+      "lim_g_over_r_at_inf": 0.0,
+      "lim_G_at_0": 9.9,
+      "lim_G_over_r_at_inf": 0.0,
+      "g_le_G_everywhere": true,
+      "strict_inequality_below_fprime0": true,
+      "G_is_wgs": true,
+      "g_is_wgs": false,
+      "G_connects_2_to_1": true,
+      "G_connects_1_to_2": false,
+      "surplus_nonnegative": true
+    }
+  },
+  "closed_form_match": {
+    "(a=100.0, b=200.0)": true,
+    "(a=50.0, b=400.0)": true,
+    "(a=10.0, b=10.0)": true
+  },
+  "chain_system": {
+    "price_vector": [
+      7.118412321409612,
+      9.645453121115645,
+      5.741722826118235,
+      8.536154759295055
+    ],
+    "external_swaps": {
+      "amm0": 64.62081409788121,
+      "amm1": 59.11257182231283,
+      "amm2": 2.1929846833813187
+    },
+    "F_C": [
+      -64.62081409788121,
+      19.39610820335949,
+      214.51008017912127,
+      1.7985626492013007
+    ],
+    "surplus_per_amm": {
+      "amm0": 41.758496146729236,
+      "amm1": 69.88592294896186,
+      "amm2": 0.4809181821545063
+    },
+    "proposition_5_8_maximizer_check": {
+      "amm0": true,
+      "amm1": true,
+      "amm2": true
+    }
+  },
+  "parallel_pools_system": {
+    "price_vector": [
+      0.6614950781118832,
+      4.920905043692314
+    ],
+    "external_swaps": {
+      "amm0": 285.7217972201822,
+      "amm1": 335.7217972201822,
+      "amm2": 17.274649846585326
+    },
+    "F_C": [
+      -638.7182442869498,
+      502.63190760585263
+    ],
+    "surplus_per_amm": {
+      "amm0": 816.3694540673094,
+      "amm1": 2254.1825025749836,
+      "amm2": 29.841352732213053
+    },
+    "proposition_5_8_maximizer_check": {
+      "amm0": true,
+      "amm1": true,
+      "amm2": true
+    }
+  },
+  "virtual_agent_supply_function_conditions": {
+    "homogeneity": true,
+    "walras_law": true,
+    "bounded_above": true
+  }
+}
